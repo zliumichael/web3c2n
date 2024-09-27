@@ -679,7 +679,7 @@ export default function Pool({ Component, pageProps }: AppProps) {
           </Col>
           <Col span={isDesktopOrLaptop ? 12 : 24} className={styles['value']}>
             {
-              !allocationTop || allocationTop == 0
+              !allocationTop || allocationTop as any == 0
                 ? <><Spin style={{ verticalAlign: 'text-bottom' }}></Spin> <span>Calculating...</span></>
                 : <>{seperateNumWithComma(formatEther(allocationTop, 2))} {projectInfo.symbol}</>
             }
